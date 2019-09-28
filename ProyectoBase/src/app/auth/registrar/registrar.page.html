@@ -1,5 +1,5 @@
 <ion-content  color="colornuevo">
-  <form  #form="ngForm" (ngSubmit)="register(form)">
+  <form  [formGroup]="registrarForm" (ngSubmit)="registrar()">
     <ion-grid>
       <ion-row color="colornuevo" justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
@@ -8,20 +8,24 @@
           </div>
           <div padding>
             <ion-item>
-              <ion-input  name="name" type="text" placeholder="Nombre" ngModel required></ion-input>
+              <ion-input  formControlName="nombre" type="text" placeholder="Nombre" ngModel required></ion-input>
+              <div  *ngIf="f.nombre.errors">*</div>
             </ion-item>
             <ion-item>
-              <ion-input name="email" type="email" placeholder="Correo" ngModel required></ion-input>
+              <ion-input formControlName="correo" type="email" placeholder="Correo" ngModel required></ion-input>
+              <div  *ngIf="f.correo.errors">*</div>
             </ion-item>
             <ion-item>
-              <ion-input name="password" type="password" placeholder="Contraseña" ngModel required></ion-input>
+              <ion-input formControlName="contrasena" type="password" placeholder="Contraseña" ngModel required></ion-input>
+              <div  *ngIf="f.contrasena.errors">*</div>
             </ion-item>
             <ion-item>
-              <ion-input name="confirm" type="password" placeholder="Repetir Contraseña" ngModel required></ion-input>
+              <ion-input formControlName="confirmarContrasena"  type="password" placeholder="Repetir Contraseña" ngModel required></ion-input>
+              <div  *ngIf="f.confirmarContrasena.errors">*</div>
             </ion-item>
           </div>
           <div padding>
-            <ion-button  size="large" shape="round" type="submit" [disabled]="form.invalid" expand="block">Registrar</ion-button>
+            <ion-button  size="large" shape="round" type="submit" [disabled]="registrarForm.invalid" expand="block">Registrar</ion-button>
           </div>
         </ion-col>
       </ion-row>
