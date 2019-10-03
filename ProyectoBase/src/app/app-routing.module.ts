@@ -8,9 +8,8 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   { path: 'registro', component: RegistrarPage },
-  { path: 'login', loadChildren: './auth/login/login.module#LoginPageModule' },
-  { path: 'registrar', component: RegistrarPage }
-
+  { path: 'registrar', component: RegistrarPage  },
+  { path: 'login', loadChildren: './auth/login/login.module#LoginPageModule' }
 ];
 @NgModule({
   imports: [
@@ -18,5 +17,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-
 export class AppRoutingModule {}
