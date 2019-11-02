@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'registro', component: RegistrarPage },
   { path: 'registrar', component: RegistrarPage  },
   { path: 'login', component: LoginPage },
-  { path: 'home', loadChildren: './home/home.module#HomePageModule' }
+  { path: 'home', loadChildren: './home/home.module#HomePageModule' },  { path: 'modal', loadChildren: './modal/modal.module#ModalPageModule' }
+
 ];
 @NgModule({
   imports: [

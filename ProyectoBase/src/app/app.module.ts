@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrarPage } from './auth/registrar/registrar.page';
 import { LoginPage } from './auth/login/login.page';
+import { ModalPageModule } from './modal/modal.module';
+
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { LoginPage } from './auth/login/login.page';
             AppRoutingModule,
             FormsModule,
             ReactiveFormsModule,
-            HttpClientModule
+            HttpClientModule,
+            ModalPageModule
+
           ],
   providers: [
     StatusBar,

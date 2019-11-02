@@ -1,0 +1,97 @@
+ion-content{
+    $colors: (
+        primary:    #488aff,
+  
+        colornuevo:    #15d0b3
+);
+}
+
+.bg-transparent {
+    background: transparent;
+  }
+
+
+ion-fab-button{
+    --background: #fff;
+    --color: #15D0B3;
+   
+
+}
+
+
+ion-content {
+    background: #15d0b3;
+}
+
+ion-header{
+    $colors: (
+        primary:    #488aff,
+  
+        colornuevo:    #15d0b3
+);
+}
+
+ion-header {
+    background: #15d0b3;
+}
+
+ion-title{
+    --background:#15d0b3;
+    --color: #fff;
+}
+
+ion-item{
+    --background: #15D0B3;
+    --color: #fff;
+    --border-color: white;
+}
+
+ion-input{
+    font-family: 'Nunito';
+    --placeholder-color: white; 
+    --placeholder-opacity: 100;
+
+}
+
+ion-button{
+    --background: white;
+    --opacity: 100;	
+    font-family: 'Nunito';
+    font-weight: 900;
+    color: #15D0B3;
+}
+
+h3{
+    color:#15D0B3;
+    font-weight: bold;
+    font-family: 'Nunito';
+}
+
+div {
+    background-color: inherit;
+    border: 0px;
+  }
+
+.icon-bigger {
+    font-size: 100px; //Preferred size here
+}
+
+.editButton {
+    padding-top: 40px;
+    text-align: center;
+}
+
+
+
+
+ion-card{
+    width: 100% !important;
+  
+  }
+
+.cardItems{
+    color: #fff;
+    --background: #fff;
+} 
+
+
