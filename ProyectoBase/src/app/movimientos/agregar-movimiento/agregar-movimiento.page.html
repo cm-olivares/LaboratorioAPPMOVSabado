@@ -1,0 +1,73 @@
+<ion-header >
+  <ion-toolbar  color="colornuevo">
+    <ion-title>{{titulo}}
+
+    </ion-title>
+
+    <ion-buttons slot="primary"> 
+          <ion-button class = "botonCerrar" shape="round" size="small" (click)="cerrarModal()">cerrar</ion-button> 
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="colornuevo" padding>
+  <form [formGroup]="modalForm" (ngSubmit)="modal()">
+    <ion-grid>
+      <ion-row color="colornuevo" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div padding>
+            <ion-item>
+              <ion-input  formControlName="descripcion" type="text" placeholder="Descripcion" ngModel required></ion-input>
+              <div color="error"  *ngIf="f.descripcion.errors">*</div>
+            </ion-item>
+            <ion-item>
+              <ion-input formControlName="cantidad1" type="number" placeholder="Cantidad" ngModel required></ion-input>
+              <div color="error"  *ngIf="f.cantidad1.errors">*</div>
+            </ion-item>
+            <ion-segment color="light" (ionChange)="segmentChanged($event)">
+            <ion-segment-button value="2" >
+              <ion-label>Ingreso</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="1">
+              <ion-label>Egreso</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+            <ion-item >
+            <ion-label>Cuenta</ion-label>
+            <ion-select placeholder="Selecciona uno">
+            <ion-select-option value="Credito Banorte">Crédito Banorte</ion-select-option>
+            <ion-select-option value="Debito Banregio">Débito Banregio</ion-select-option>
+            <ion-select-option value="Credito BBVA">Crédito BBVA</ion-select-option>
+            <ion-select-option value="Debito Banamex">Débito Banamex</ion-select-option>
+            </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label>Etiqueta</ion-label>
+              <ion-select placeholder="Selecciona uno">
+              <ion-select-option value="1">Deuda</ion-select-option>
+              <ion-select-option value="2">Hogar</ion-select-option>
+              <ion-select-option value="3">Alimento</ion-select-option>
+              <ion-select-option value="4">Entretenimiento</ion-select-option>
+              <ion-select-option value="5">Transporte</ion-select-option>
+              <ion-select-option value="6">Educacion</ion-select-option>
+              <ion-select-option value="7">Regalos</ion-select-option>
+              <ion-select-option value="8">Viajes</ion-select-option>
+              <ion-select-option value="9">Ingresos</ion-select-option>
+              <ion-select-option value="10">Ropa y Calzado</ion-select-option>
+              </ion-select>
+              </ion-item>
+            </div>
+            
+                  <div class="centrado" padding>
+                  <ion-button class="cerrar" shape="round" type="submit" expand="block" size="large" [disabled]="modalForm.invalid" > REGISTRAR
+                
+                  </ion-button>
+                  </div>
+              
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content> 

@@ -18,22 +18,22 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab2',
+        path: 'movimientos',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('../movimientos/movimientos.module').then(m => m.MovimientosPageModule)
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'resumen',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+              import('../resumen/resumen.module').then(m => m.ResumenPageModule)
           }
         ]
       },
@@ -49,6 +49,7 @@ const routes: Routes = [
     redirectTo: '/tabs/tab2',
     pathMatch: 'full'
   }
+
 ];
 
 @NgModule({

@@ -1,0 +1,65 @@
+ion-content{
+    $colors: (
+        primary:    #488aff,
+
+        colornuevo:    #15d0b3
+);
+}
+
+ion-content {
+    background: #15d0b3;
+}
+ion-item{
+    --background:#15d0b3;
+    --color: #fff;
+}
+
+ion-button{
+
+    --background:#fff;
+    --color: #15d0b3;
+
+
+}
+ion-input{
+    --placeholder-color: white; 
+    --placeholder-opacity: 100;
+
+}
+ion-item{
+    --background: #15D0B3;
+    --color: #fff;
+    --border-color: white;
+}
+
+.botonCerrar{
+    --background: white;
+    --opacity: 100;	
+   
+    font-weight: 900;
+    color: #15D0B3;
+}
+
+ion-header{
+    $colors: (
+        primary:    #488aff,
+  
+        colornuevo:    #15d0b3
+);
+}
+
+ion-header {
+    background: #15d0b3;
+    color:#fff
+}
+.centrado{
+    text-align: center;
+  }
+
+  .cerrar{
+    --background: white;
+    --opacity: 100;	
+  
+    font-weight: 900;
+    color: #15D0B3;
+}

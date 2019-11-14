@@ -1,0 +1,36 @@
+<ion-header >
+    <ion-toolbar  color="colornuevo">
+      <ion-title>Resumen
+        <ion-icon name="stats"></ion-icon>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+
+<ion-content  color="colornuevo" padding>
+   <div >
+      <ion-segment color="light" [(ngModel)]="saldo1" #doughnutCanvas>
+          <ion-segment-button value="Ingreso" >
+            <ion-label>Ingreso</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="Egreso">
+            <ion-label>Egreso</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+   </div>
+   <div [ngSwitch]="saldo1">
+     <ion-list *ngSwitchCase="'Ingreso'">
+       <ion-item>
+          
+              <canvas #doughnutCanvas></canvas>
+      
+       </ion-item>
+     </ion-list>
+     <ion-list *ngSwitchCase="'Egreso'">
+        <ion-item>
+          <h1>hola</h1>
+        </ion-item>
+      </ion-list>
+   </div>
+   
+</ion-content>

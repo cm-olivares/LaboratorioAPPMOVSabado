@@ -5,24 +5,25 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CuentaPage } from './cuenta.page';
-import { AgregarCuentaPageModule } from './agregar-cuenta/agregar-cuenta.module';
+import { MovimientosPage } from './movimientos.page';
+import { AgregarMovimientoPageModule } from './agregar-movimiento/agregar-movimiento.module';
+
 
 const routes: Routes = [
   {
     path: '',
-    component: CuentaPage
+    component: MovimientosPage
   }
 ];
 
 @NgModule({
   imports: [
-    AgregarCuentaPageModule,
+    AgregarMovimientoPageModule,
     CommonModule,
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [CuentaPage]
+  declarations: [MovimientosPage]
 })
-export class CuentaPageModule {}
+export class MovimientosPageModule {}
