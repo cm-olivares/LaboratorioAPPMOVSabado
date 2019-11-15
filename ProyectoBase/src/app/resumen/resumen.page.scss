@@ -5,20 +5,21 @@ ion-content{
         colornuevo:    #15d0b3
 );
 }
-
-ion-content {
+ion-content{
     background: #15d0b3;
 }
-
-ion-item{
-    --background:#15d0b3;
-    --color: #fff;
+ion-header{
+    $colors: (
+        primary:    #488aff,
+  
+        colornuevo:    #15d0b3
+);
 }
 
-ion-button{
-    
-    --background:#fff;
-    --color: #15d0b3;
-    
-    
+ion-header {
+    background: #15d0b3;
+}
+ion-title{
+    --background:#15d0b3;
+    --color: #fff;
 }
